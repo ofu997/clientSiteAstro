@@ -1,0 +1,35 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  background-color: #fafafa;
+}
+
+.backgroundImage {
+  min-height: 750px;
+  // background-attachment: fixed;
+  background-repeat  : no-repeat;
+  background-size: cover; 
+}
+
+@media all and (max-width:769px) {
+  .backgroundImage {
+    background-attachment: initial;
+  }
+}
+
+@media all and (min-width:770px) {
+  .backgroundImage {
+    background-attachment: fixed;
+  }
+}
+
+// .heroImageStyle {
+//   background-size: auto 100%; 
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-image: url(https://w.wallhaven.cc/full/6k/wallhaven-6k3oox.jpg);  
+// }

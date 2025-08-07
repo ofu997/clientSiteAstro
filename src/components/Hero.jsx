@@ -32,7 +32,22 @@ const Header = () => {
   const [image, setImage] = useState('');
   const [backgroundPosition, setBGp ] = useState('top'); 
 
+  const imageStyle = isMobile? 
+    {
+      backgroundAttachment: 'initial',
+      backgroundSize: 'auto 100%',
+      backgroundPosition: 'top',
+      backgroundRepeat: 'no-repeat',
+      backgroundImage: `url(${image.src})`
 
+    }:
+    {
+      backgroundAttachment: 'fixed',
+      backgroundSize: 'cover',
+      backgroundPosition: `${backgroundPosition}`,
+      backgroundRepeat: 'no-repeat',
+      backgroundImage: `url(${image.src})`
+    };
 
   useEffect(() => {
     if (window.innerWidth > 769) {
@@ -54,22 +69,7 @@ const Header = () => {
     if (random===9) { setImage(bg9) }
   }, []);
 
-     const imageStyle = isMobile? 
-    {
-      backgroundAttachment: 'initial',
-      backgroundSize: 'auto 100%',
-      backgroundPosition: 'top',
-      backgroundRepeat: 'no-repeat',
-      backgroundImage: `url(${image.src})`
 
-    }:
-    {
-      backgroundAttachment: 'fixed',
-      backgroundSize: 'cover',
-      backgroundPosition: `${backgroundPosition}`,
-      backgroundRepeat: 'no-repeat',
-      backgroundImage: `url(${image.src})`
-    };
 
   return (
     <section 
@@ -77,7 +77,7 @@ const Header = () => {
       className="jumbotron"
       style={imageStyle}
     >
-      <Container >
+      <Container style={{ alignItems: 'center' }} >
         {
           isMobile &&
           <header style={{ fontSize: 'calc(5px + 2vmin)', paddingTop: '2em', paddingBottom: 12, fontWeight: '200' }}>
@@ -88,14 +88,6 @@ const Header = () => {
             </nav>
           </header>
         }
-        <h3>76</h3>
-        {/* <h3>{imageStyle.image}</h3> */}
-        <h3>{isDesktop}yyy</h3>
-        <h3>{backgroundPosition}</h3>
-        <div style={{height: 800}} />
-        {/* <h3>{image}</h3> */}
-        {/* <h3>{image}</h3> */}
-        {/* <img src={image.src} /> */}
         <Fade delay={1e3}>
           <div style={{ marginTop: '15%' }}></div>
           <h1 className="hero-title" 
