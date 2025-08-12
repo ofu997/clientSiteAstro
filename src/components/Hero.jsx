@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Fade } from 'react-awesome-reveal';
-//import { Link } from 'react-scroll';
+import { Link } from 'react-scroll';
 import bg1 from '../assets/1enhanced1.jpg';
 import bg2 from '../assets/2enhanced.jpg';
 import bg3 from '../assets/4enhanced.jpg';
@@ -11,18 +11,6 @@ import bg6 from '../assets/CDMX-transformed.jpeg';
 import bg7 from '../assets/Riverside-transformed.jpeg';
 import bg8 from '../assets/San_Diego.jpg';
 import bg9 from '../assets/Wilmette-transformed.jpeg';
-
-// import { getImage } from 'astro:assets';
-
-// const bg1 = await getImage({ src: BG1})
-// const bg2 = await getImage({ src: BG2})
-// const bg3 = await getImage({ src: BG3})
-// const bg4 = await getImage({ src: BG4})
-// const bg5 = await getImage({ src: BG5})
-// const bg6 = await getImage({ src: BG6})
-// const bg7 = await getImage({ src: BG7})
-// const bg8 = await getImage({ src: BG8})
-// const bg9 = await getImage({ src: BG90})
 
 import { curriculumVitae } from '../assets/links';
 
@@ -106,7 +94,7 @@ const Header = () => {
             <br />
           </h1>
         </Fade>
-        {/* <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
+        <Fade left={isDesktop} bottom={isMobile} duration={1000} delay={1000} distance="30px">
           <p className="hero-cta" 
             style={{ 
               justifyContent: 'center',  
@@ -124,7 +112,7 @@ const Header = () => {
               </Link>
             </span>
           </p>
-        </Fade> */}
+        </Fade>
       </Container>
     </section>
   );
