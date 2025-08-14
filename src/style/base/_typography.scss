@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap');
-$default-font-size: 1.6rem;
-$big-font-size: 4rem;
-$mid-font-size: 2.5rem;
+// $default-font-size: 1.6rem;
+// $big-font-size: 4rem;
+// 2.5rem: 2.5rem;
 
 h1 {
   font-weight: 700;
@@ -28,17 +28,20 @@ a:hover {
 .section-title {
   margin: 0px;
   margin-bottom: 4.5rem;
-  font-size: $big-font-size;
+  font-size: 4rem;
   font-weight: bold;
   text-transform: uppercase;
+}
 
-  @include respond(phone) {
+@media screen and (max-width: 600px) {
+  .section-title {
     font-size: 2.8rem;
+    color: springgreen;
   }
 }
 
 .dark-blue-text {
-  color: $dark-blue-text !important;
+  color: #272341 !important;
 }
 
 .text-color-main {
@@ -47,10 +50,10 @@ a:hover {
   // -webkit-text-fill-color: transparent;
   -webkit-text-fill-color: black;
   // Responsive text purple style
-  @include respond(phone) {
+  //@include respond(phone) {
     // background-image: none;
     // -webkit-text-fill-color: $secondary-color;
-  }
+  //}
 
   &:hover {
     transform: translateX(2px);

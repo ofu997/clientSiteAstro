@@ -1,41 +1,79 @@
+@use "sass:color";
+
 #about {
-  // background-color: $primary-color;
+  // background-color: #02aab0;
   // background-image: linear-gradient(
   //   135deg,
-  //   $primary-color 0%,
+  //   #02aab0 0%,
   //   $secondary-color 100%
   // );
-  color: $white-color;
+  color: #fff;
   height: 100%;
   border-top: 0px;
   // -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   // clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
   padding-bottom: 10%;
+  text-align: center;
 
-  @include respond(tab-land) {
-    height: 100%;
-    -webkit-clip-path: none;
-    clip-path: none;
+  // @include respond(tab-land) {
+  //   height: 100%;
+  //   -webkit-clip-path: none;
+  //   clip-path: none;
+  // }
+
+  .section-title {
+    margin: 0px;
+    margin-bottom: 4.5rem;
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 600px) {
+    .section-title {
+      font-size: 2.8rem;
+      //color: springgreen;
+    }
   }
 
   .about-wrapper {
-    @include respond(phone) {
+    // @include respond(phone) {
+    //   padding-bottom: 5rem;
+    // }migrated 
+
+    @media screen and (max-width: 600px) {
       padding-bottom: 5rem;
     }
 
     &__image {
       display: flex;
+      // not sure about this
       height: 100%;
+
       align-items: center;
       justify-content: center;
 
-      @include respond(tab-port) {
-        padding-bottom: 6.4rem;
+      // @include respond(tab-port) {
+      //   padding-bottom: 6.4rem;
+      // }
+      // @include respond(tab-land) {
+      //   height: 100%;
+      // }
+
+      //important change
+      img {
+        max-width: 70%; 
+        height: auto;
       }
-      @include respond(tab-land) {
-        height: 100%;
+      @media screen and (min-width: 601px) {
+        max-width: 40%
       }
+
     }
+    // &__image#outer {
+    //   overflow: hidden;
+    // }
 
     &__info {
       display: flex;
@@ -43,31 +81,50 @@
       justify-content: center;
       flex-direction: column;
 
-      @include respond(phone) {
+      // @include respond(phone) {
+      //   align-items: center;
+      // } migrated
+      .about-wrapper__info {
         align-items: center;
+        @media screen and (max-width: 600px) {
+          margin-top: 50px;
+        }
       }
 
       &-text {
         text-align: left;
 
-        @include respond(tab-port) {
-          font-size: 1.5rem;
-          text-align: center;
-        }
-        @include respond(phone) {
+        // @include respond(tab-port) {
+        //   font-size: 1.5rem;
+        //   text-align: center;
+        // }
+        // @include respond(phone) {
+        //   font-size: 1.6rem;
+        //   text-align: center;
+        // }
+        @media screen and (max-width: 600px) {
           font-size: 1.6rem;
           text-align: center;
+          margin-top: 50px;
         }
 
         &--important {
-          background: darken($secondary-color, 1%);
+          background: color.scale(#00cdac, $lightness: 1%);
           display: inline-block;
           font-style: italic;
           padding: 0 0.3rem;
           margin: 0.3rem 0;
           line-height: 1.6;
 
-          @include respond(phone) {
+          // @include respond(phone) {
+          //   display: inline;
+          //   margin: 0;
+          //   padding: 0;
+          //   background: transparent;
+          //   font-style: normal;
+          // }
+
+          @media screen and (max-width: 600px) {
             display: inline;
             margin: 0;
             padding: 0;
@@ -81,16 +138,16 @@
   .about-cta {
     display: flex;
 
-    @include respond(tab-port) {
-      justify-content: center;
-    }
+    // @include respond(tab-port) {
+    //   justify-content: center;
+    // }
 
     & a {
       font-size: 2.6rem;
 
-      @include respond(phone) {
-        font-size: 2.2rem;
-      }
+      // @include respond(phone) {
+      //   font-size: 2.2rem;
+      // }
     }
   }  
 
@@ -101,6 +158,7 @@
     .about-wrapper__image {
       margin: 0 auto;
     }
+
   }
 
   @media (min-width: 770px) {
@@ -112,6 +170,17 @@
       width: 40%;
       min-height: 350px;
       align-items: space-between;
+    }
+  }
+
+  #aboutSectionParentDiv {
+    @media screen and (max-width: 600px) {
+      //display: flex;
+      justify-content: center;
+    }
+    @media screen and (min-width: 601px) {
+      justify-content: space-evenly;
+      display: flex;
     }
   }
 }
