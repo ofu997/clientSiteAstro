@@ -29,7 +29,7 @@ const About = () => {
         </Fade>
         <div className='aboutMeImageAndDescription' id="aboutSectionParentDiv" 
           style={{ 
-            display: 'flex',
+             display: 'flex',
              margin: 'auto', 
              justifyContent: 'center', 
           }}
@@ -37,13 +37,13 @@ const About = () => {
           <div className='about-wrapper__image'>
             <img src={Picture.src} alt="Nathan Ellstrand's profile picture" />
           </div>
-          {/* <Fade delay={1e3}> */}
+          <Fade delay={1e3}>
             <div className="about-wrapper__info" >
               <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0 5%', whiteSpace: 'pre-line'}}>
                 {aboutText}
               </p>
             </div>
-          {/* </Fade> */}
+          </Fade>
         </div>
         <div style={{height: 100 }}></div>
         <p className='about-cta'>
