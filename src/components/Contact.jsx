@@ -29,11 +29,11 @@ const Contact = () => {
   return (
     <section id="contact">
       <Container>
-        <Fade delay={1e3}>
+        <Fade delay={500} triggerOnce={true} >
             <h2 className="section-title">Contact</h2>
         </Fade>
         <div style={{ height: 100 }} />
-        <Fade delay={1e3}>
+        <Fade delay={500} triggerOnce={true} >
           <div className="contact-wrapper">
             <a
               target="_blank"

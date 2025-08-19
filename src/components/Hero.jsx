@@ -10,7 +10,7 @@ import bg5 from '../assets/6enhanced1.jpg';
 import bg6 from '../assets/CDMX-transformed.jpeg';
 import bg7 from '../assets/Riverside-transformed.jpeg';
 import bg8 from '../assets/San_Diego.jpg';
-import bg9 from '../assets/Wilmette-transformed.jpeg';
+import bg9 from '../assets/Wilmette-transformed-enhanced.png';
 
 import { curriculumVitae } from '../assets/links';
 
@@ -54,7 +54,7 @@ const Header = () => {
     if (random===6) { setImage(bg6) }
     if (random===7) { setImage(bg7); setBGp('center bottom')}
     if (random===8) { setImage(bg8); setBGp('center bottom')}
-    if (random===9) { setImage(bg9) }
+    if (random===9) { setImage(bg9); setBGp('center bottom') }
   }, []);
 
 
@@ -76,7 +76,7 @@ const Header = () => {
             </nav>
           </header>
         }
-        <Fade delay={1e3}>
+        <Fade delay={700} triggerOnce={true} >
           <div style={{ marginTop: '15%' }}></div>
           <h1 className="hero-title" 
             style={{ 
@@ -87,7 +87,7 @@ const Header = () => {
             <span 
               className="text-color-main" 
               style={{ 
-                textShadow: '1px 0px 1px white, 0px 1px 1px white, -1px 0px 1px white, 0px -1px 1px white',
+                textShadow: '3px 0px 1px white, 0px 1px 1px white, -1px 0px 1px white, 0px -1px 1px white',
               }}>
                 Nathan Ellstrand
             </span>

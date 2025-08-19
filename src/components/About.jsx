@@ -21,10 +21,10 @@ const About = () => {
 
   return (
     <section id="about" style={{ backgroundColor: '#082567' }} 
-    // className='jumbotron'
+     //className='jumbotron'
     >
       <div>
-        <Fade delay={1e3}>
+        <Fade delay={1e3} triggerOnce={true} >
             <h2 className="section-title">About Me</h2>
         </Fade>
         <div className='aboutMeImageAndDescription' id="aboutSectionParentDiv" 
@@ -37,7 +37,7 @@ const About = () => {
           <div className='about-wrapper__image'>
             <img src={Picture.src} alt="Nathan Ellstrand's profile picture" />
           </div>
-          <Fade delay={1e3}>
+          <Fade delay={500} triggerOnce={true} >
             <div className="about-wrapper__info" >
               <p className="about-wrapper__info-text" style={{ textAlign: 'left', margin: '0 5%', whiteSpace: 'pre-line'}}>
                 {aboutText}
