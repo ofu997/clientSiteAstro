@@ -8,6 +8,10 @@ body {
   background-color: #fafafa;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 .backgroundImage {
   min-height: 750px;
   // background-attachment: fixed;
