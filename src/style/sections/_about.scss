@@ -62,11 +62,17 @@
       //   height: 100%;
       // }
 
+
+
       //important change
       img {
         max-width: 70%; 
         height: auto;
         margin-bottom: 50;
+        @media screen and (max-width: 600px) {
+          width: 70%;
+          height: auto
+        }
       }
       @media screen and (min-width: 601px) {
         max-width: 60%;
